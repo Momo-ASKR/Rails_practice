@@ -4,13 +4,14 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '2.4.1'
 
+gem 'jquery-turbolinks'
+gem 'jquery-rails'
 gem 'bcrypt',         '3.1.12'
-
 gem 'rails-controller-testing'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3', groups: %w(test development), require: false
+gem 'sqlite3', '~> 1.3.6', groups: %w(test development), require: false
 
 gem 'pg', groups: %w(production), require: false
 # Use Puma as the app server
