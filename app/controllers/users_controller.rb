@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   #before_actionは順番に注意(上から実行される)
   before_action :logged_in_user, only: [:index, :edit, :update, :destroy]
   before_action :correct_user, only: [:edit, :update]
-  before_action :admin_user,     only: :destroy  #[:destroy]でもいい
+  before_action :admin_user,     only: :destroy  #[:destroy]でもOK
   
   def index
     @users = User.paginate(page: params[:page])
