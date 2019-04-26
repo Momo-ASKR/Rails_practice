@@ -8,6 +8,8 @@ gem 'jquery-turbolinks'
 gem 'jquery-rails'
 gem 'bcrypt',         '3.1.12'
 gem 'faker'
+gem 'carrierwave'
+gem 'mini_magick'  
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'rails-controller-testing'
@@ -16,7 +18,11 @@ gem 'rails', '~> 5.2.1'
 # Use sqlite3 as the database for Active Record
 gem 'sqlite3', '~> 1.3.6', groups: %w(test development), require: false
 
-gem 'pg', groups: %w(production), require: false
+#gem 'pg', groups: %w(production), require: false
+group :production do
+  gem 'pg'
+  gem 'fog-aws'
+  end
 # Use Puma as the app server
 gem 'puma', '~> 3.11'
 # Use SCSS for stylesheets
